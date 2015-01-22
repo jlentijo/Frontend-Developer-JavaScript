@@ -1,0 +1,28 @@
+{
+    "repositories": [
+        {
+            "name": "Frontend-Developer-JavaScript",
+            "owner": "u26726",
+            "description": "Exercise for candidates",
+            "language": "",
+            "followers": 0,
+            "url": "https://github.com/u26726/Frontend-Developer-JavaScript"
+        },
+        {
+            "name": "learning-frontend",
+            "owner": "pepibumur",
+            "description": "Resources and a progress diary about a mobile developer learning Frontend languages (Javascript, HTML, CSS)",
+            "language": "",
+            "followers": 0,
+            "url": "https://github.com/pepibumur/learning-frontend"
+        },
+        {
+            "name": "pixel-perfect",
+            "owner": "martinratinaud",
+            "description": "A small javascript utility that helps you overlay a jpg design on top of your html pages to ease HTML integration. It supports different size of images in case of a responsive integration. Made for FrontEnd developers !",
+            "language": "JavaScript",
+            "followers": 2,
+            "url": "https://github.com/martinratinaud/pixel-perfect"
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+body{
+    font-family: Lucida Grande, sans-serif;
+}
+.container {
+    margin: 20px auto 0px auto;
+    text-align: center;
+    width: 80%;
+}
+#results {
+    text-align: left;
+}
+input#search {
+    display: block;
+    font-size: 1.4em;
+    color: cadetblue;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    width: 100%;
+    border: 1px solid cadetblue;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+ul.list-group {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+ul.list-group > li.list-group-item {
+    color: cadetblue;
+    cursor: pointer;
+    display: block;
+    padding: 10px 15px;
+    border-width: 1px 1px 0px 1px;
+    border-style: solid;
+    border-color: cadetblue;
+}
+ul.list-group > li.list-group-item:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+ul.list-group > li.list-group-item:last-child {
+    border-bottom: 1px solid cadetblue;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+ul.list-group > li.list-group-item:hover {
+    background-color: cadetblue;
+    color: white;
+}
+ul.list-group > li.list-group-item {
+    background-color: white;
+    color: cadetblue;
+}
+ul.list-group > li.list-group-item > h3,
+span.helper > h3 {
+    margin: 0px;
+    font-size: 1em;
+}
+ul.list-group > li.list-group-item > .info > a {
+    text-decoration: none;
+    color: cadetblue;
+}
+ul.list-group > li.list-group-item:hover > .info > a {
+    text-decoration: none;
+    color: white;
+}
+ul.list-group > li.list-group-item > .info > a:hover {
+    font-weight: bold;
+}
+span.helper {
+    color: white;
+    background-color: cadetblue;
+    padding: 10px 15px;
+    margin: 0px auto;
+    display: inline-block;
+}
+span.helper.error {
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+}
+.hide {
+    display: none !important;
+}
