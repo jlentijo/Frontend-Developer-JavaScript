@@ -1,3 +1,5 @@
+'use strict';
+
 // Make controller RepositoriesCtrl in module repositoriesApp
 angular.module('repositoriesApp')
     .controller('RepositoriesCtrl', ['RepositoriesServices', 'RepositoriesCache', '$location', '$rootScope', '$routeParams', '$scope',
