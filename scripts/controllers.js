@@ -53,11 +53,6 @@ angular.module('repositoriesApp')
                     });
             };
 
-            $scope.showInfoRepository = function( event ){
-                var el = event.currentTarget;
-                $(el).find('.info').slideToggle( "slow" );
-            };
-
             $scope.showLoading = function( show ) {
                 $scope.loading = show;
                 $scope.error = false;

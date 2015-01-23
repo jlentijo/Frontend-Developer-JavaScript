@@ -1,11 +1,11 @@
 <ul class="list-group">
-    <li data-ng-repeat="repo in repositories" class="list-group-item" data-ng-click="showInfoRepository($event)">
-        <h3>{{repo.owner}}/{{repo.name}}</h3>
-        <div class="info" style="display:none;">
-            <small>{{repo.language}}</small>
-             | <small>Followers:{{repo.followers}}</small>
-             | <a href="{{repo.url}}" target="_blank"><small>{{repo.url}}</small></a>
-            <div class="description"><small>{{repo.description}}</small></div>
+    <li data-ng-repeat="repo in repositories" class="list-group-item">
+        <h3 data-ng-click="repo.toggleShowInfo()">{{repo.owner}}/{{repo.name}}</h3>
+        <div class="info animate-show" data-ng-show="repo.showInfo">
+            {{repo.language}}
+             | Followers:{{repo.followers}}
+             | <a href="{{repo.url}}" target="_blank">{{repo.url}}</a>
+            <div class="description">{{repo.description}}</div>
         </div>
     </li>
 </ul>

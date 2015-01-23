@@ -27,9 +27,7 @@ ul.list-group {
 }
 ul.list-group > li.list-group-item {
     color: cadetblue;
-    cursor: pointer;
     display: block;
-    padding: 10px 15px;
     border-width: 1px 1px 0px 1px;
     border-style: solid;
     border-color: cadetblue;
@@ -53,8 +51,14 @@ ul.list-group > li.list-group-item {
 }
 ul.list-group > li.list-group-item > h3,
 span.helper > h3 {
-    margin: 0px;
+    cursor: pointer;
     font-size: 1em;
+    margin: 0px;
+    padding: 10px 15px;
+}
+ul.list-group > li.list-group-item > .info {
+    font-size: 12px;
+    padding: 0px 15px 10px 15px;
 }
 ul.list-group > li.list-group-item > .info > a {
     text-decoration: none;
@@ -70,7 +74,6 @@ ul.list-group > li.list-group-item > .info > a:hover {
 span.helper {
     color: white;
     background-color: cadetblue;
-    padding: 10px 15px;
     margin: 0px auto;
     display: inline-block;
 }
@@ -78,7 +81,4 @@ span.helper.error {
     color: red;
     background-color: white;
     border: 1px solid red;
-}
-.hide {
-    display: none !important;
 }

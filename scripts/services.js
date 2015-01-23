@@ -19,20 +19,34 @@ angular.module('repositoriesApp')
             }
         };
     }])
-    .factory('RepositoriesServices', [ '$http', function( $http ) {
+    .factory('Repository', [ function(){
+
+        var Repository = function(owner, name, language, followers, url, description){
+            this.owner = owner;
+            this.name = name;
+            this.language = language;
+            this.followers = followers;
+            this.url = url;
+            this.description = description;
+            this.showInfo = false;
+        };
+
+        Repository.prototype.toggleShowInfo = function(){
+            this.showInfo = !this.showInfo;
+        };
+
+        return Repository;
+    }])
+    .factory('RepositoriesServices', [ 'Repository', '$http', function( Repository, $http ) {
 
         return {
             transformDataToRepositories: function( data ){
                 var repositories = [];
                 angular.forEach(data, function( item ){
-                    repositories.push({
-                        'owner': item.owner,
-                        'name': item.name,
-                        'language': item.language,
-                        'followers': item.followers,
-                        'url': item.url,
-                        'description': item.description
-                    });
+                    repositories.push(
+                        new Repository(item.owner, item.name, item.language,
+                            item.followers, item.url, item.description)
+                    );
                 });
                 return repositories;
             },
