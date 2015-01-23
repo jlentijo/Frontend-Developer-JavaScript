@@ -23,7 +23,6 @@ angular.module('repositoriesApp')
                 if($routeParams.keywords){
                     $scope.keywords = $routeParams.keywords;
                     $scope.clearResults();
-                    $scope.showLoading(true);
                     $scope.getRepositoriesList($routeParams.keywords, $scope.page,
                         RepositoriesCache.get($routeParams.keywords,$scope.page));
                 }
@@ -31,13 +30,14 @@ angular.module('repositoriesApp')
 
             $scope.loadMoreRepositories = function(){
                 if($scope.hasMoreResults && !$scope.loading){
-                    $scope.showLoading(true);
                     $scope.getRepositoriesList($routeParams.keywords, $scope.page,
                         RepositoriesCache.get($routeParams.keywords,$scope.page));
                 }
             };
 
             $scope.getRepositoriesList = function( keywords, page, etag ){
+
+                $scope.showLoading(true);
 
                 RepositoriesServices.getRepositoriesFromGitHub( keywords, page, etag)
                     .then(function( response ){

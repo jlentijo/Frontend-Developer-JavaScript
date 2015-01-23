@@ -1,6 +1,6 @@
 <ul class="list-group">
     <li data-ng-repeat="repo in repositories" class="list-group-item">
-        <h3 data-ng-click="repo.toggleShowInfo()">{{repo.owner}}/{{repo.name}}</h3>
+        <h3 data-ng-click="repo.toggleShowInfo()">{{repo.getFullName()}}</h3>
         <div class="info animate-show" data-ng-show="repo.showInfo">
             {{repo.language}}
              | Followers:{{repo.followers}}
@@ -9,3 +9,5 @@
         </div>
     </li>
 </ul>
+<span class="helper" data-ng-show="loading"><h3>Loading...</h3></span>
+<span class="helper error" data-ng-show="error"><h3>{{error_message}}</h3></span>

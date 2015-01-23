@@ -35,6 +35,10 @@ angular.module('repositoriesApp')
             this.showInfo = !this.showInfo;
         };
 
+        Repository.prototype.getFullName = function(){
+            return this.owner + '/' + this.name;
+        };
+
         return Repository;
     }])
     .factory('RepositoriesServices', [ 'Repository', '$http', function( Repository, $http ) {

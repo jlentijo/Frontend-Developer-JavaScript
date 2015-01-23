@@ -28,9 +28,7 @@ $(document).ready(function () {
     $('#results')
         .attr('data-ng-view', '')
         .attr('infinite-scroll', 'loadMoreRepositories()')
-        .attr('infinite-scroll-distance', '2')
-        .after('<span class="helper" data-ng-show="loading"><h3>Loading...</h3></span>')
-        .after('<span class="helper error" data-ng-show="error"><h3>{{error_message}}</h3></span>');
+        .attr('infinite-scroll-distance', '2');
     // Bootstrap with repositoriesApp
     angular.bootstrap($('body'), ['repositoriesApp']);
 });

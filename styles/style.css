@@ -7,7 +7,7 @@ body{
     width: 80%;
 }
 #results {
-    text-align: left;
+    text-align: center;
 }
 input#search {
     display: block;
@@ -24,6 +24,7 @@ ul.list-group {
     margin: 0px;
     padding: 0px;
     list-style-type: none;
+    text-align: left;
 }
 ul.list-group > li.list-group-item {
     color: cadetblue;
